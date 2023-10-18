@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      .carousel-indicators-c li {
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 50% !important;
+      }
+      .carousel-indicators-c li.active {
+        background-color: darkblue;
+      }
+      ul {
+        display: none;
+      }
+      span:focus + ul {
+        display: block;
+      }
+      .test::after {
+        content: "-";
+      }
+      .test.collapsed::after {
+        content: "+";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mb-5">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 order-md-last bg-info text-center text-light"
+        >
+          boenos dias
+        </div>
+        <div
+          class="col-12 col-md-6 order-md-first bg-success text-center text-light"
+        >
+          boenos dias
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div
+            id="carouselId"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-touch="false"
+            data-bd-intreval="false"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-bs-target="#carouselId"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="First slide"
+              ></li>
+              <li
+                data-bs-target="#carouselId"
+                data-bs-slide-to="1"
+                aria-label="Second slide"
+              ></li>
+              <li
+                data-bs-target="#carouselId"
+                data-bs-slide-to="2"
+                aria-label="Third slide"
+              ></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img
+                  src="https://picsum.photos/id/490/600/400"
+                  class="w-100 d-block"
+                  alt="First slide"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Lorem ipsum dolor sit amet.</h5>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Praesentium aut odit nobis ratione ab totam illo.
+                  </p>
+                  <button class="btn btn-primary text-light">vender</button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://picsum.photos/id/671/600/400"
+                  class="w-100 d-block"
+                  alt="Second slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://picsum.photos/id/675/600/400"
+                  class="w-100 d-block"
+                  alt="Third slide"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselId"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselId"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span tabindex="1">drop down</span>
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+    </ul>
+    <p>
+      <a
+        class="btn btn-primary collapsed test"
+        data-bs-toggle="collapse"
+        href="#collapseExample"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Link with href
+      </a>
+      <button
+        class="btn btn-primary test"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Button with data-bs-target
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        Some placeholder content for the collapse component. This panel is
+        hidden by default but revealed when the user activates the relevant
+        trigger.
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
